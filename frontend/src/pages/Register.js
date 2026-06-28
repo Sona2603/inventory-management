@@ -1,6 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+
+
 
 function Register() {
 
@@ -12,6 +15,8 @@ function Register() {
 
   const [showPassword, setShowPassword] =
     useState(false);
+
+    const navigate = useNavigate();
 
   const [loading, setLoading] =
     useState(false);
@@ -53,9 +58,7 @@ function Register() {
 
       toast.success("Registration Successful");
 
-      import { useNavigate } from "react-router-dom";
-
-const navigate = useNavigate();
+      
 
 navigate("/login");
 
@@ -383,7 +386,7 @@ navigate("/login");
               "
             >
               Login
-            </a>
+            </Link>
           </p>
 
         </div>
