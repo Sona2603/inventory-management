@@ -317,8 +317,7 @@ function Login() {
           >
             Don’t have an account?
 
-            <a
-              href="/register"
+            <Link to="/register"
               className="
               text-blue-600
               font-semibold
@@ -327,7 +326,7 @@ function Login() {
               "
             >
               Register
-            </a>
+            </Link>
           </p>
 
         </div>
