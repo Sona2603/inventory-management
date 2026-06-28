@@ -53,7 +53,11 @@ function Register() {
 
       toast.success("Registration Successful");
 
-      window.location.href = "/login";
+      import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
+
+navigate("/login");
 
     } catch (error) {
 
@@ -369,8 +373,8 @@ function Register() {
           >
             Already have an account?
 
-            <a
-              href="/login"
+          
+              <Link to="/login"
               className="
               text-green-600
               font-semibold
