@@ -6,6 +6,10 @@ import {
   toast,
 } from "react-toastify";
 
+import { useNavigate } from "react-router-dom";
+
+
+
 import "react-toastify/dist/ReactToastify.css";
 import {
   BarChart,
@@ -28,7 +32,7 @@ function Dashboard() {
   const [submitting, setSubmitting] = useState(false);
   const [sellQuantity, setSellQuantity] = useState("");
 const [sellProduct, setSellProduct] = useState(null);
-
+const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -458,11 +462,9 @@ if (!confirmDelete) return;
   // =========================
 
   const handleLogout = () => {
-
-    localStorage.removeItem("token");
-
-    window.location.href = "/login";
-  };
+  localStorage.removeItem("token");
+  navigate("/login");
+};
 
 
 const handleSell = (product) => {
