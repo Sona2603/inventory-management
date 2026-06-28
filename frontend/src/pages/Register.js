@@ -44,7 +44,7 @@ function Register() {
     try {
 
       await axios.post(
-        "http://127.0.0.1:8000/api/users/register/",
+        "https://inventory-management-8qsw.onrender.com/api/users/register/",
         {
           username: formData.username,
           password: formData.password,

@@ -194,7 +194,7 @@ useEffect(() => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-  `http://127.0.0.1:8000/api/products/?search=${searchTerm}`,
+  `https://inventory-management-8qsw.onrender.com/api/products/?search=${searchTerm}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -222,7 +222,7 @@ useEffect(() => {
     const token = localStorage.getItem("token");
 
     const response = await axios.get(
-      "http://127.0.0.1:8000/api/stock-history/",
+      "https://inventory-management-8qsw.onrender.com/api/stock-history/",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -322,7 +322,7 @@ if (Number(formData.quantity) < 0) {
       if (editId) {
 
         await axios.put(
-          `http://127.0.0.1:8000/api/products/update/${editId}/`,
+          `https://inventory-management-8qsw.onrender.com/api/products/update/${editId}/`,
           data,
           {
             headers: {
@@ -343,7 +343,7 @@ if (Number(formData.quantity) < 0) {
       else {
 
         await axios.post(
-          "http://127.0.0.1:8000/api/products/",
+          "https://inventory-management-8qsw.onrender.com/api/products/",
           data,
           {
             headers: {
@@ -403,7 +403,7 @@ if (!confirmDelete) return;
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://127.0.0.1:8000/api/products/delete/${id}/`,
+        `https://inventory-management-8qsw.onrender.com/api/products/delete/${id}/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -493,7 +493,7 @@ const submitSell = async () => {
     data.append("quantity", sellQuantity);
 
     await axios.post(
-      `http://127.0.0.1:8000/api/products/sell/${sellProduct.id}/`,
+      `https://inventory-management-8qsw.onrender.com/api/products/sell/${sellProduct.id}/`,
       data,
       {
         headers: {
